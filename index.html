@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karan Kemble - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom styles for glassmorphism and animations */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .glass-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+    }
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s ease-in forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    /* Smooth scroll behavior */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full bg-gray-800/50 backdrop-blur-md py-4 z-50">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <a href="#home" class="text-2xl font-bold text-cyan-500">Karan Kemble</a>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="#home" class="hover:text-cyan-400 transition">Home</a></li>
+        <li><a href="#about" class="hover:text-cyan-400 transition">About</a></li>
+        <li><a href="#skills" class="hover:text-cyan-400 transition">Skills</a></li>
+        <li><a href="#projects" class="hover:text-cyan-400 transition">Projects</a></li>
+        <li><a href="#experience" class="hover:text-cyan-400 transition">Experience</a></li>
+        <li><a href="#contact" class="hover:text-cyan-400">Contact</a></li>
+      </ul>
+      <!-- Hamburger for mobile -->
+      <button id="mobile-menu-btn" class="md:hidden text-cyan-300 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <ul id="mobile-menu" class="hidden md:hidden bg-gray-800/90 p-4 mt-2 space-y-2">
+      <li><a href="#home" class="block py-2 hover:text-cyan-400">Home</a></li>
+      <li><a href="#about" class="block py-2 hover:text-cyan-400">About</a></li>
+      <li><a href="#skills" class="block py-2 hover:text-cyan-400">Skills</a></li>
+      <li><a href="#projects" class="block py-2 hover:text-cyan-400">Projects</a></li>
+      <li><a href="#experience" class="block py-2 hover:text-cyan-400">Experience</a></li>
+      <li><a href="#contact" class="block py-2 hover:text-cyan-400">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-gray-900 to-blue-900">
+    <div class="container mx-auto px-4 text-center fade-in">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4 text-cyan-500">Welcome to My Portfolio</h1>
+      <p class="text-xl md:text-2xl mb-6">I'm Karan Kemble, a Java Software Development Engineer with 7+ years of experience building scalable backend systems.</p>
+      <a href="#projects" class="bg-cyan-500 text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-cyan-400 transition">View My Work</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16">
+    <div class="container mx-auto px-4 fade-in">
+      <h2 class="text-3xl font-bold text-center mb-8 text-cyan-500">About Me</h2>
+      <p class="text-lg max-w-2xl mx-auto text-center">
+        Experienced Java Backend Developer with over 7 years of expertise in developing scalable and high-performance backend systems across eCommerce, FinTech, Telecommunications, and Banking. Skilled in Java, Spring Boot, microservices, and AWS, I thrive in agile environments and am passionate about solving complex problems with innovative solutions. I like to learn a lot from YouTube, blogs, as well as pursuing certifications from Udemy, Coursera, etc.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-16 bg-gray-800">
+    <div class="container mx-auto px-4 fade-in">
+      <h2 class="text-3xl font-bold text-center mb-8 text-cyan-500">Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="glass-card p-4 text-center rounded-lg">Atlassian</div>
+        <div class="glass-card p-4 text-center rounded-lg">AWS S3</div>
+        <div class="glass-card p-4 text-center rounded-lg">Debugging</div>
+        <div class="glass-card p-4 text-center rounded-lg">Design Patterns</div>
+        <div class="glass-card p-4 text-center rounded-lg">Distributed Tracing</div>
+        <div class="glass-card p-4 text-center rounded-lg">Docker</div>
+        <div class="glass-card p-4 text-center rounded-lg">Documentation</div>
+        <div class="glass-card p-4 text-center rounded-lg">EC2</div>
+        <div class="glass-card p-4 text-center rounded-lg">ELB</div>
+        <div class="glass-card p-4 text-center rounded-lg">Functional Programming</div>
+        <div class="glass-card p-4 text-center rounded-lg">Hibernate</div>
+        <div class="glass-card p-4 text-center rounded-lg">IAM</div>
+        <div class="glass-card p-4 text-center rounded-lg">Java</div>
+        <div class="glass-card p-4 text-center rounded-lg">Java Microservices</div>
+        <div class="glass-card p-4 text-center rounded-lg">Jira</div>
+        <div class="glass-card p-4 text-center rounded-lg">JPA</div>
+        <div class="glass-card p-4 text-center rounded-lg">Kafka</div>
+        <div class="glass-card p-4 text-center rounded-lg">Kubernetes</div>
+        <div class="glass-card p-4 text-center rounded-lg">LAMBDA</div>
+        <div class="glass-card p-4 text-center rounded-lg">Maven</div>
+        <div class="glass-card p-4 text-center rounded-lg">Microservice Patterns</div>
+        <div class="glass-card p-4 text-center rounded-lg">MongoDB</div>
+        <div class="glass-card p-4 text-center rounded-lg">MySQL</div>
+        <div class="glass-card p-4 text-center rounded-lg">Production Support</div>
+        <div class="glass-card p-4 text-center rounded-lg">Redis</div>
+        <div class="glass-card p-4 text-center rounded-lg">RESTful APIs</div>
+        <div class="glass-card p-4 text-center rounded-lg">SDE</div>
+        <div class="glass-card p-4 text-center rounded-lg">Spring Boot</div>
+        <div class="glass-card p-4 text-center rounded-lg">Spring Cloud</div>
+        <div class="glass-card p-4 text-center rounded-lg">Spring Data JPA</div>
+        <div class="glass-card p-4 text-center rounded-lg">Spring Security</div>
+        <div class="glass-card p-4 text-center rounded-lg">Unit Testing</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-16">
+    <div class="container mx-auto px-4 fade-in">
+      <h2 class="text-3xl font-bold text-center mb-8 text-cyan-500">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project 1 -->
+        <div class="glass-card p-6 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Klevu eCommerce Platform</h3>
+          <p class="mb-4">Developed AI-powered search and recommendation features using Java, Spring Boot, and microservices for a SaaS-based eCommerce solution.</p>
+          <a href="https://klevu.com" target="_blank" class="text-cyan-400 hover:underline">View Project</a>
+        </div>
+        <!-- Project 2 -->
+        <div class="glass-card p-6 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Paytm Money FinTech APIs</h3>
+          <p class="mb-4">Built RESTful APIs for FinTech applications, integrating insurance products for Paytm Money, Oppo Kash, and Realme Paysa.</p>
+          <a href="https://paytmmoney.com" target="_blank" class="text-cyan-400 hover:underline">View Project</a>
+        </div>
+        <!-- Project 3 -->
+        <div class="glass-card p-6 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Tata Communications NMS</h3>
+          <p class="mb-4">Developed a network management system for international cable operations using Java, JSP, and Servlets.</p>
+          <a href="https://tatacommunications.com" target="_blank" class="text-cyan-400 hover:underline">View Project</a>
+        </div>
+        <!-- Project 4 -->
+        <div class="glass-card p-6 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Mycard Mobile Banking</h3>
+          <p class="mb-4">Built an admin portal and Data Encryption Module for secure file transfers in a mobile banking and cheque-clearing system using Spring Boot.</p>
+          <a href="#" class="text-cyan-400 hover:underline">View Project</a>
+        </div>
+        <!-- Project 5 -->
+        <div class="glass-card p-6 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">Neurolinx ERP & Smart Homes</h3>
+          <p class="mb-4">Developed a web-based ERP for business operations and features for Vetaar Smart Homes dashboard using Java and Android UI.</p>
+          <a href="#" class="text-cyan-400 hover:underline">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="py-16 bg-gray-800">
+    <div class="container mx-auto px-4 fade-in">
+      <h2 class="text-3xl font-bold text-center mb-8 text-cyan-500">Work Experience</h2>
+      <div class="space-y-8">
+        <!-- Experience 1 -->
+        <div class="glass-card p-6 rounded-lg">
+          <h3 class="text-xl font-semibold">Senior Software Engineer, Klevu</h3>
+          <p class="text-cyan-400 mb-2">April 2022 - Present</p>
+          <p>Led microservices development for AI-powered eCommerce solutions, refactored legacy systems, and wrote technical documentation.</p>
+        </div>
+        <!-- Experience 2 -->
+        <div class="glass-card p-6 rounded-lg">
+          <h3 class="text-xl font-semibold">Java Developer, Sunday Mobility</h3>
+          <p class="text-cyan-400 mb-2">January 2020 - March 2022</p>
+          <p>Developed RESTful APIs for FinTech apps like Paytm Money and collaborated with cross-functional teams.</p>
+        </div>
+        <!-- Experience 3 -->
+        <div class="glass-card p-6 rounded-lg">
+          <h3 class="text-xl font-semibold">Associate Software Engineer, Mastercom</h3>
+          <p class="text-cyan-400 mb-2">July 2019 - December 2019</p>
+          <p>Worked on network management systems for Tata Communications using Java and Hibernate.</p>
+        </div>
+        <!-- Experience 4 -->
+        <div class="glass-card p-6 rounded-lg">
+          <h3 class="text-xl font-semibold">Software Developer, Mycard Consultancy</h3>
+          <p class="text-cyan-400 mb-2">December 2018 - June 2019</p>
+          <p>Built an admin portal and Data Encryption Module for mobile banking services using Java and Spring Boot.</p>
+        </div>
+        <!-- Experience 5 -->
+        <div class="glass-card p-6 rounded-lg">
+          <h3 class="text-xl font-semibold">Software Developer, Neurolinx Software Technologies</h3>
+          <p class="text-cyan-400 mb-2">March 2017 - November 2018</p>
+          <p>Developed a web-based ERP and smart home dashboard features for Vetaar Smart Homes using Java.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16">
+    <div class="container mx-auto px-4 fade-in">
+      <h2 class="text-3xl font-bold text-center mb-8 text-cyan-500">Contact Me</h2>
+      <div class="max-w-lg mx-auto text-center">
+        <p class="mb-4">Reach out to discuss opportunities or collaborations!</p>
+        <div class="flex justify-center items-center space-x-4">
+          <p id="email-text" class="text-cyan-400">kemblekaran@gmail.com</p>
+          <button id="copy-email-btn" class="bg-cyan-500 text-gray-900 px-4 py-2 rounded-full hover:bg-cyan-400 transition" aria-label="Copy email to clipboard">Copy Email</button>
+        </div>
+        <p id="copy-feedback" class="text-green-400 mt-2 hidden">Email copied to clipboard!</p>
+        <a href="https://www.linkedin.com/in/karan-kemble/" target="_blank" class="inline-block mt-4 text-cyan-400 hover:underline">Connect on LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-4 text-center">
+    <p>© 2025 Karan Kemble. All rights reserved.</p>
+    <a href="https://www.linkedin.com/in/karan-kemble/" target="_blank" class="text-cyan-400 hover:underline">LinkedIn</a>
+  </footer>
+
+  <!-- JavaScript for Interactivity -->
+  <script>
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Copy Email Functionality
+    const copyBtn = document.getElementById('copy-email-btn');
+    const copyFeedback = document.getElementById('copy-feedback');
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText('kemblekaran@gmail.com').then(() => {
+        copyFeedback.classList.remove('hidden');
+        setTimeout(() => copyFeedback.classList.add('hidden'), 2000);
+      });
+    });
+
+    // Fade-in Animation on Scroll
+    const fadeInElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationDelay = `${entry.target.dataset.delay || 0}s`;
+          entry.target.classList.add('fade-in');
+        }
+      });
+    }, { threshold: 0.2 });
+    fadeInElements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
